@@ -1,0 +1,238 @@
+/* =========================================
+   AI INTERVIEW CARD
+========================================= */
+
+.interview-chat-card {
+  position: relative;
+
+  margin-bottom: 20px;
+
+  padding: 38px 42px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff 0%,
+      #fcfcff 60%,
+      #f8f7ff 100%
+    );
+
+  border: 1px solid #e5e7f0;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 18px 45px rgba(25, 30, 60, 0.07),
+    0 2px 6px rgba(25, 30, 60, 0.03);
+}
+
+/* Decorative glow */
+
+.interview-chat-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 260px;
+  height: 260px;
+
+  top: -150px;
+  right: -100px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(99, 91, 255, 0.12),
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
+
+/* =========================================
+   AI PROFILE
+========================================= */
+
+.ai-profile {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  margin-bottom: 38px;
+}
+
+.ai-avatar {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #635bff,
+      #8175ff
+    );
+
+  color: white;
+
+  font-size: 21px;
+
+  box-shadow:
+    0 10px 25px rgba(99, 91, 255, 0.25);
+}
+
+.ai-profile h3 {
+  margin: 0 0 3px;
+
+  font-size: 14px;
+
+  font-weight: 750;
+
+  color: #172033;
+}
+
+.ai-profile span {
+  font-size: 11px;
+
+  color: #20a464;
+
+  font-weight: 600;
+}
+
+/* =========================================
+   QUESTION
+========================================= */
+
+.question-section {
+  position: relative;
+
+  padding-bottom: 30px;
+}
+
+.question-label {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 6px 10px;
+
+  margin-bottom: 16px;
+
+  border-radius: 6px;
+
+  background: #f0efff;
+
+  color: #635bff;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+}
+
+.question-section h1 {
+  max-width: 850px;
+
+  margin: 0;
+
+  color: #172033;
+
+  font-size: clamp(25px, 3vw, 34px);
+
+  line-height: 1.35;
+
+  letter-spacing: -0.8px;
+}
+
+/* =========================================
+   AI MESSAGE
+========================================= */
+
+.ai-message {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px 17px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #f4f3ff,
+      #f8f8ff
+    );
+
+  border: 1px solid #ecebff;
+
+  border-radius: 10px;
+}
+
+.message-icon {
+  flex-shrink: 0;
+
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: #635bff;
+
+  font-size: 12px;
+
+  box-shadow:
+    0 3px 8px rgba(99, 91, 255, 0.08);
+}
+
+.ai-message p {
+  margin: 0;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+
+  color: #667085;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+  .interview-chat-card {
+    padding: 28px 22px;
+  }
+
+  .question-section h1 {
+    font-size: 24px;
+  }
+
+  .ai-profile {
+    margin-bottom: 28px;
+  }
+}

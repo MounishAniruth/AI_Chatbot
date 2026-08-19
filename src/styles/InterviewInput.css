@@ -1,0 +1,291 @@
+/* =========================================
+   ANSWER CARD
+========================================= */
+
+.interview-input-card {
+  padding: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #fafaff
+    );
+
+  border: 1px solid #e3e5ee;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 14px 35px rgba(25, 30, 60, 0.06),
+    0 2px 6px rgba(25, 30, 60, 0.03);
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.answer-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 10px;
+}
+
+.answer-header label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  font-size: 13px;
+
+  font-weight: 750;
+
+  color: #344054;
+}
+
+.answer-header label::before {
+  content: "";
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #635bff;
+}
+
+.answer-header span {
+  padding: 5px 8px;
+
+  border-radius: 6px;
+
+  background: #f5f6fa;
+
+  font-size: 10px;
+
+  color: #98a2b3;
+}
+
+/* =========================================
+   TEXT AREA
+========================================= */
+
+.interview-input-card textarea {
+  width: 100%;
+
+  min-height: 155px;
+
+  box-sizing: border-box;
+
+  padding: 16px 17px;
+
+  resize: vertical;
+
+  border: 1px solid #dfe2eb;
+
+  border-radius: 12px;
+
+  outline: none;
+
+  background: #fbfcff;
+
+  color: #172033;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  line-height: 1.65;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.interview-input-card textarea:hover {
+  border-color: #cfd2df;
+
+  background: #ffffff;
+}
+
+.interview-input-card textarea:focus {
+  border-color: #635bff;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 4px rgba(99, 91, 255, 0.08);
+}
+
+.interview-input-card textarea::placeholder {
+  color: #a2a9ba;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.input-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: 14px;
+}
+
+.keyboard-hint {
+  font-size: 11px;
+
+  color: #98a2b3;
+}
+
+.input-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+}
+
+/* =========================================
+   PREVIOUS BUTTON
+========================================= */
+
+.previous-button {
+  padding: 10px 15px;
+
+  border: 1px solid #dfe2eb;
+
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  color: #475467;
+
+  font-size: 12px;
+
+  font-weight: 650;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.previous-button:hover {
+  background: #f7f7fa;
+
+  border-color: #cfd2df;
+}
+
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
+
+.submit-answer-button {
+  min-width: 145px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 11px 18px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #635bff,
+      #796eff
+    );
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(99, 91, 255, 0.22);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.submit-answer-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 25px rgba(99, 91, 255, 0.30);
+}
+
+.submit-answer-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submit-answer-button:disabled {
+  opacity: 0.45;
+
+  cursor: not-allowed;
+
+  box-shadow: none;
+}
+
+/* =========================================
+   NOTE
+========================================= */
+
+.interview-note {
+  margin: 17px 0 0;
+
+  text-align: center;
+
+  font-size: 11px;
+
+  color: #98a2b3;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 650px) {
+  .interview-input-card {
+    padding: 18px;
+  }
+
+  .input-footer {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 13px;
+  }
+
+  .keyboard-hint {
+    text-align: center;
+  }
+
+  .input-actions {
+    justify-content: flex-end;
+  }
+}

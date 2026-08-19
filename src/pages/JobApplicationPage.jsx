@@ -39,17 +39,14 @@ const JobApplicationPage = () => {
       resume,
     });
 
-    alert("Application submitted successfully!");
-
-    // Later we can replace this with an API call.
+    // After successful application, go to interview page
+    navigate("/interview");
   };
 
   return (
     <div className="application-page">
-
       {/* Header */}
       <header className="application-header">
-
         <button
           className="back-button"
           onClick={() => navigate("/")}
@@ -63,44 +60,31 @@ const JobApplicationPage = () => {
         </div>
 
         <div className="header-spacer"></div>
-
       </header>
-
 
       {/* Page Heading */}
       <section className="application-heading">
-
         <div>
           <p className="heading-label">JOB APPLICATION</p>
 
-          <h1>
-            Apply for this position
-          </h1>
+          <h1>Apply for this position</h1>
 
           <p>
             Take the next step in your career by submitting
             your application below.
           </p>
         </div>
-
       </section>
-
 
       {/* Main Content */}
       <main className="application-container">
-
         {/* Left Side - Job Details */}
         <JobDetails />
 
-
         {/* Right Side - Application Form */}
         <section className="application-form-card">
-
           <div className="form-header">
-
-            <div className="form-icon">
-              ✦
-            </div>
+            <div className="form-icon">✦</div>
 
             <div>
               <h2>Your Application</h2>
@@ -109,18 +93,13 @@ const JobApplicationPage = () => {
                 Fill in your details to apply.
               </p>
             </div>
-
           </div>
 
-
           <form onSubmit={handleSubmit}>
-
             {/* Full Name */}
             <div className="form-group">
-
               <label htmlFor="fullName">
-                Full Name
-                <span>*</span>
+                Full Name <span>*</span>
               </label>
 
               <input
@@ -132,16 +111,12 @@ const JobApplicationPage = () => {
                 onChange={handleChange}
                 required
               />
-
             </div>
-
 
             {/* Email */}
             <div className="form-group">
-
               <label htmlFor="email">
-                Email Address
-                <span>*</span>
+                Email Address <span>*</span>
               </label>
 
               <input
@@ -153,16 +128,12 @@ const JobApplicationPage = () => {
                 onChange={handleChange}
                 required
               />
-
             </div>
-
 
             {/* Phone */}
             <div className="form-group">
-
               <label htmlFor="phone">
-                Phone Number
-                <span>*</span>
+                Phone Number <span>*</span>
               </label>
 
               <input
@@ -174,16 +145,13 @@ const JobApplicationPage = () => {
                 onChange={handleChange}
                 required
               />
-
             </div>
-
 
             {/* Resume */}
             <ResumeUpload
               resume={resume}
               setResume={setResume}
             />
-
 
             {/* Submit */}
             <button
@@ -194,18 +162,13 @@ const JobApplicationPage = () => {
               <span>→</span>
             </button>
 
-
             <p className="privacy-text">
               By submitting this application, you agree to
               provide accurate information.
             </p>
-
           </form>
-
         </section>
-
       </main>
-
     </div>
   );
 };

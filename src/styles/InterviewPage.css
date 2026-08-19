@@ -1,0 +1,292 @@
+/* =========================================
+   INTERVIEW PAGE
+========================================= */
+
+.interview-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 10% 0%,
+      rgba(99, 91, 255, 0.10),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 15%,
+      rgba(124, 92, 255, 0.08),
+      transparent 25%
+    ),
+    #f7f8fc;
+
+  color: #172033;
+
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.interview-container {
+  width: min(1120px, calc(100% - 48px));
+
+  margin: 0 auto;
+
+  padding: 42px 0 70px;
+}
+
+/* =========================================
+   PROGRESS SECTION
+========================================= */
+
+.interview-progress-section {
+  margin-bottom: 22px;
+}
+
+.progress-info {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 9px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  color: #667085;
+}
+
+.progress-info span:last-child {
+  color: #635bff;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 6px;
+
+  overflow: hidden;
+
+  background: #e7e9f2;
+
+  border-radius: 999px;
+}
+
+.progress-fill {
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      #635bff,
+      #8b7cff
+    );
+
+  border-radius: inherit;
+
+  box-shadow:
+    0 0 12px rgba(99, 91, 255, 0.35);
+
+  transition:
+    width 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =========================================
+   COMPLETION PAGE
+========================================= */
+
+.interview-completed {
+  width: min(680px, calc(100% - 40px));
+
+  margin: 90px auto;
+
+  padding: 60px 50px;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.96),
+      rgba(248, 249, 255, 0.96)
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.8);
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 25px 70px rgba(30, 35, 60, 0.10),
+    0 2px 8px rgba(30, 35, 60, 0.04);
+
+  backdrop-filter: blur(20px);
+}
+
+.completion-icon {
+  width: 76px;
+  height: 76px;
+
+  margin: 0 auto 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #635bff,
+      #8c7dff
+    );
+
+  color: white;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  box-shadow:
+    0 15px 35px rgba(99, 91, 255, 0.30);
+}
+
+.completion-label {
+  margin-bottom: 10px;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1.7px;
+
+  color: #635bff;
+}
+
+.interview-completed h1 {
+  margin: 0 auto 15px;
+
+  max-width: 570px;
+
+  font-size: 31px;
+
+  line-height: 1.25;
+
+  letter-spacing: -0.7px;
+}
+
+.completion-description {
+  max-width: 520px;
+
+  margin: 0 auto;
+
+  color: #667085;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+.completion-summary {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 70px;
+
+  margin: 38px 0;
+}
+
+.completion-summary div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.completion-summary strong {
+  font-size: 26px;
+
+  color: #172033;
+}
+
+.completion-summary span {
+  font-size: 12px;
+
+  color: #98a2b3;
+}
+
+.finish-button {
+  padding: 13px 25px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #635bff,
+      #786eff
+    );
+
+  color: white;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 25px rgba(99, 91, 255, 0.25);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.finish-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 14px 30px rgba(99, 91, 255, 0.32);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+  .interview-container {
+    width: min(100% - 28px, 1120px);
+
+    padding-top: 28px;
+  }
+
+  .interview-completed {
+    padding: 40px 25px;
+
+    margin-top: 50px;
+  }
+
+  .interview-completed h1 {
+    font-size: 26px;
+  }
+
+  .completion-summary {
+    gap: 35px;
+  }
+}
+
+@media (max-width: 500px) {
+  .completion-summary {
+    flex-direction: column;
+
+    gap: 20px;
+  }
+}
